@@ -1,20 +1,20 @@
-import { Clapperboard, House, User } from 'lucide-react';
+import { Clapperboard} from 'lucide-react';
 import Link from "next/link"
 
 export function Header() {
     return (
-        <header className='bg-blue-500 text-white p-4'>
-            <div className='flex justify-center text-center mt-4'>
-                <Clapperboard size={70} className=""/>
-                <h3 className='text-2xl pt-4 pl-2 font-semibold md:pl-5'>
+        <header className='bg-blue-500 text-white pt-1'>
+            <div className='flex justify-start text-center mt-2'>
+                <Clapperboard size={130} className='md:size-40'/>
+                <h2 className='text-2xl pt-16 pl-2 font-bold md:pl-5 md:text-4xl'>
                     Movie Here
-                </h3>
+                </h2>
             </div>
 
-            <div className='flex justify-end pt-4'>
+            <div className='flex justify-end pb-3 pr-3 md:text-xl'>
                 
                 <Link href="#" className='pl-5'>
-                    <span className='hover:bg-blue-600 text-white font-bold py-2 px-4 rounded'>   
+                    <span className='hover:bg-blue-600 text-white font-bold py-2 px-4rounded'>   
                         Home
                     </span>
                 </Link>
@@ -24,7 +24,7 @@ export function Header() {
                         Movies
                     </span>
                 </Link>
-                <Link href="#" className='pr-7 pl-5'>
+                <Link href="#" className='pr-2 pl-5'>
                     <span className='hover:bg-blue-600 text-white font-bold py-2 px-2 rounded hover:scale-105 duration-200'>   
                         Login
                     </span>
