@@ -1,4 +1,6 @@
 import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
+import { Info } from "../components/Info";
 
 
 export default function Home() {
@@ -6,6 +8,8 @@ export default function Home() {
     <div className="">
       <main className="">
         <Header/>
+        <Info/>
+        <Footer/>
       </main>
     </div>
   );
