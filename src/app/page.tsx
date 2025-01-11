@@ -5,8 +5,8 @@ import { Info } from "../components/Info";
 
 export default function Home() {
   return (
-    <div className="">
-      <main className="">
+    <div>
+      <main>
         <Header/>
         <Info/>
         <Footer/>
