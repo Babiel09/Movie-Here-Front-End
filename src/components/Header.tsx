@@ -10,7 +10,8 @@ export default function Header(){
         <header className="container mx-auto px-4 py-6">
         <nav className="flex items-center justify-between">
           <motion.div 
-            className="flex items-center space-x-2"
+          onClick={()=>window.location.href = "/"}
+            className="flex items-center space-x-2 hover:cursor-pointer"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
@@ -33,5 +34,6 @@ export default function Header(){
           </div>
         </nav>
       </header>
+        
     );
 };
