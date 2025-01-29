@@ -44,15 +44,6 @@ export default function Header() {
               <Play className="h-5 w-5" />
               <span>Movies</span>
             </motion.a>
-            
-            <motion.a
-              href="/profile"
-              className="flex items-center space-x-1 text-gray-300 hover:text-white transition-colors"
-              whileHover={{ scale: 1.05 }}
-            >
-              <User className="h-5 w-5" />
-              <span>Profile</span>
-            </motion.a>
 
             <motion.a
               href="/login"
@@ -100,14 +91,6 @@ export default function Header() {
               <Play className="h-5 w-5" />
               <span>Movies</span>
             </a>
-            <a
-              href="/profile"
-              className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors"
-            >
-              <User className="h-5 w-5" />
-              <span>Profile</span>
-            </a>
-
             <a
               href="/login"
               className="flex items-center space-x-2 px-4 py-2 bg-red-500 text-white rounded-full hover:bg-red-600 transition-colors w-full justify-center"

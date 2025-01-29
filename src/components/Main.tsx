@@ -30,6 +30,7 @@ const HomePage = () => {
           className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-full flex items-center justify-center mx-auto space-x-2"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
+          onClick={()=>window.location.href = "/login"}
         >
           <Play className="h-5 w-5" />
           <span>Get Started</span>
