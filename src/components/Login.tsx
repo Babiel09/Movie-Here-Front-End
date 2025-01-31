@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import { Mail, Lock, ArrowRight, User } from 'lucide-react'
 import { motion } from 'framer-motion'
+import RegistrationModal from './Register';
 
 interface Particle {
   id: number;
@@ -17,6 +18,11 @@ const LoginComponent = () => {
   const [email, setEmail] = useState<string>('')
   const [password, setPassword] = useState<string>('')
   const [particles, setParticles] = useState<Particle[]>([])
+  const [modal, setModal] = useState<boolean>(false);
+
+  const handleCloseModal = () => {
+    setModal(false);
+  };
 
   useEffect(() => {
     // Create initial particles
@@ -80,7 +86,7 @@ const LoginComponent = () => {
         transition={{ duration: 0.6 }}
         className="bg-gray-800/80 backdrop-blur-md p-8 rounded-xl w-full max-w-md z-10 shadow-xl border border-gray-700/50"
       >
-        <h1 className="text-3xl font-bold text-white mb-8 text-center">Login to Movie Here</h1>
+        <h1 className="text-3xl font-bold text-white mb-8 text-center">Login</h1>
        
         <form className="space-y-6">
           <div>
@@ -130,16 +136,17 @@ const LoginComponent = () => {
             className="w-full bg-red-500 hover:bg-red-600 text-white py-3 rounded-lg flex items-center justify-center space-x-2"
             type="submit"
           >
-            <span>Entrar</span>
+            <span>Login</span>
             <ArrowRight className="h-5 w-5" />
           </motion.button>
         </form>
         <p className="text-gray-400 text-center mt-6">
           Do not have an acount?{' '}
-          <a href="/register" className="text-red-500 hover:text-red-400">
+          <button onClick={()=>setModal(true)} className="text-red-500 hover:text-red-400">
             Sign Up!
-          </a>
+          </button>
         </p>
+        { modal && <RegistrationModal onClose={handleCloseModal}/>}
       </motion.div>
     </div>
   )
